@@ -1,0 +1,128 @@
+# ==============================================================================
+# SoloOS - Security & Build Git Ignore Policy
+# ==============================================================================
+# This repository is configured to expose UI / client-layer assets and open
+# architectural specifications only. Proprietary backend schemas, serverless
+# functions, payment gateway logic, secrets, and internal audits are strictly excluded.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENVIRONMENT VARIABLES & SECRETS (STRICT ZERO-LEAKAGE)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+*.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+credentials.json
+secrets/
+
+# Allow sample configuration templates only
+!.env.example
+
+# ------------------------------------------------------------------------------
+# 2. BACKEND INFRASTRUCTURE, SCHEMAS & MIGRATIONS
+# ------------------------------------------------------------------------------
+# Physical database schemas, DDL scripts, migration histories, and backend docs
+supabase/
+.temp/
+*.sql
+schema.sql
+new_schema.sql
+extend_profiles.sql
+migrations/
+seeds/
+*.dump
+*.pgdump
+ARCHITECTURE.md
+
+# ------------------------------------------------------------------------------
+# 3. BACKEND FUNCTIONS & EDGE RUNTIMES
+# ------------------------------------------------------------------------------
+supabase/functions/
+functions/
+api/server/
+server/
+backend/
+
+# ------------------------------------------------------------------------------
+# 4. PAYMENT GATEWAY, RAZORPAY & PROPRIETARY BILLING MODULES
+# ------------------------------------------------------------------------------
+soloos-billing/
+billing/
+*razorpay*
+!src/types/
+!src/components/**/pricing*
+!src/components/**/subscription*
+
+# ------------------------------------------------------------------------------
+# 5. PROPRIETARY AUDITS, BUSINESS ANALYSES & WORKING DOCUMENTS
+# ------------------------------------------------------------------------------
+documentation/SoloOS_Monetization_Audit.*
+documentation/
+analysis.md
+guidance.md
+work.md
+doc_creation.md
+guidelines/
+
+# ------------------------------------------------------------------------------
+# 6. DEPENDENCIES & PACKAGE MANAGERS
+# ------------------------------------------------------------------------------
+node_modules/
+.pnpm-store/
+.yarn/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# 7. PRODUCTION BUILDS & ARCHIVE ARTIFACTS
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+build/
+out/
+*.zip
+soloos-app.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+
+# ------------------------------------------------------------------------------
+# 8. LOGS & DIAGNOSTICS
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 9. IDE, EDITOR & OS METADATA
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+.DS_Store
+Thumbs.db
+Desktop.ini

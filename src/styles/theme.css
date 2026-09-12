@@ -1,0 +1,312 @@
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================================
+   SoloOS "Ledger" design system
+   Source of truth: soloos-design-system.html (tokens + primitives).
+   Restrained workspace palette — one accent (ledger green), neutral
+   surfaces, explicit status tokens. Reserve gradients/expression for the
+   public marketing surface only, never the operational app.
+   ========================================================================= */
+
+:root {
+  --font-size: 16px;
+
+  /* ---- Grounded Co-Pilot color system (soloos-color-system.html) ---- */
+  --bg: #F7F7F4;
+  --surface: #FFFFFF;
+  --elevated: #FFFFFF;
+  --border: #E4E4DF;
+  --text-primary: #12172A;
+  --text-secondary: #6B7280;
+  --green: #14795C;
+  --green-hover: #1C8F6D;
+  --green-tint: #E3F3EC;
+  --ember: #DB7F3B;
+  --ember-tint: #FBEADD;
+  --danger: #C0392B;
+  --danger-tint: #FBE4E1;
+  --shadow: 0 1px 2px rgba(18,23,42,0.04), 0 8px 24px rgba(18,23,42,0.05);
+
+  /* Semantic aliases */
+  --ink: var(--text-primary);
+  --ink-soft: #3A4144;
+  --ink-faint: var(--text-secondary);
+  --mist: var(--bg);
+  --paper: var(--surface);
+  --line: var(--border);
+  --line-strong: #C7CBC9;
+  --ledger: var(--green);
+  --ledger-dark: var(--green-hover);
+  --ledger-tint: var(--green-tint);
+  --amber: var(--ember);
+  --amber-tint: var(--ember-tint);
+  --amber-ink: #8A5D16;
+  --brick: var(--danger);
+  --brick-tint: var(--danger-tint);
+  --brick-ink: #8F3323;
+  --slate: #5B6B72;
+  --slate-tint: #E9EDEE;
+
+  /* ---- shadcn/radix mapping ---- */
+  --background: var(--bg);
+  --foreground: var(--text-primary);
+  --card: var(--surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--elevated);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--green);
+  --primary-foreground: #ffffff;
+  --secondary: var(--border);
+  --secondary-foreground: var(--text-primary);
+  --muted: #ececeb;
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--green-tint);
+  --accent-foreground: var(--green);
+  --destructive: var(--danger);
+  --destructive-foreground: #ffffff;
+  --border: var(--border);
+  --input: transparent;
+  --input-background: var(--surface);
+  --switch-background: var(--border);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: var(--green);
+
+  --chart-1: var(--green);
+  --chart-2: var(--ember);
+  --chart-3: #5B6B72;
+  --chart-4: var(--danger);
+  --chart-5: var(--text-secondary);
+
+  --radius: 0.5rem;
+
+  --sidebar: var(--bg);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--green);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--surface);
+  --sidebar-accent-foreground: var(--text-primary);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--green);
+}
+
+/* SoloOS Grounded Co-Pilot Dark Mode */
+.dark {
+  --bg: #0B1220;
+  --surface: #131B2E;
+  --elevated: #1C2740;
+  --border: #2A3654;
+  --text-primary: #F2F4F8;
+  --text-secondary: #93A0B8;
+  --green: #14795C;
+  --green-hover: #1C8F6D;
+  --green-tint: #12332A;
+  --ember: #DB7F3B;
+  --ember-tint: #3A2413;
+  --danger: #C0392B;
+  --danger-tint: #3B1A15;
+  --shadow: 0 1px 2px rgba(0,0,0,0.25);
+
+  --ink: var(--text-primary);
+  --ink-soft: #C7D4D0;
+  --ink-faint: var(--text-secondary);
+  --mist: var(--bg);
+  --paper: var(--surface);
+  --line: var(--border);
+  --line-strong: #455651;
+  --ledger: #14795C;
+  --ledger-dark: #1C8F6D;
+  --ledger-tint: #12332A;
+  --amber: var(--ember);
+  --amber-tint: var(--ember-tint);
+  --amber-ink: #F5D69E;
+  --brick: var(--danger);
+  --brick-tint: var(--danger-tint);
+  --brick-ink: #F7C4BB;
+  --slate: #A0B3AC;
+  --slate-tint: #1C2740;
+
+  --background: var(--bg);
+  --foreground: var(--text-primary);
+  --card: var(--surface);
+  --card-foreground: var(--text-primary);
+  --popover: var(--elevated);
+  --popover-foreground: var(--text-primary);
+  --primary: #1C8F6D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1C2740;
+  --secondary-foreground: var(--text-primary);
+  --muted: #1C2740;
+  --muted-foreground: var(--text-secondary);
+  --accent: #12332A;
+  --accent-foreground: #63C5A3;
+  --destructive: var(--danger);
+  --destructive-foreground: #ffffff;
+  --border: var(--border);
+  --input: #131B2E;
+  --input-background: #131B2E;
+  --switch-background: var(--border);
+  --ring: #1C8F6D;
+
+  --chart-1: #1C8F6D;
+  --chart-2: var(--ember);
+  --chart-3: #93A0B8;
+  --chart-4: var(--danger);
+  --chart-5: #C7D4D0;
+
+  --sidebar: var(--bg);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: #1C8F6D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--surface);
+  --sidebar-accent-foreground: var(--text-primary);
+  --sidebar-border: var(--border);
+  --sidebar-ring: #1C8F6D;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Grounded Co-Pilot raw tokens */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-green: var(--green);
+  --color-green-hover: var(--green-hover);
+  --color-green-tint: var(--green-tint);
+  --color-ember: var(--ember);
+  --color-ember-tint: var(--ember-tint);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+
+  /* Legacy semantic mappings */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ledger: var(--ledger);
+  --color-ledger-dark: var(--ledger-dark);
+  --color-ledger-tint: var(--ledger-tint);
+  --color-amber: var(--amber);
+  --color-amber-tint: var(--amber-tint);
+  --color-amber-ink: var(--amber-ink);
+  --color-brick: var(--brick);
+  --color-brick-tint: var(--brick-tint);
+  --color-brick-ink: var(--brick-ink);
+  --color-slate: var(--slate);
+  --color-slate-tint: var(--slate-tint);
+
+  --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* Every number in the product reads in mono — money, counts, dates in
+     tables/stats. Apply this class explicitly rather than globally, since
+     body copy must stay in Public Sans. */
+  .font-mono,
+  .tabular-figures {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+}

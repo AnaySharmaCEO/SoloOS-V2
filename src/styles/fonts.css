@@ -1,0 +1,6 @@
+/*
+  SoloOS type system.
+  UI text: Public Sans. Every number (money, counts, dates in tables): IBM Plex Mono.
+  Loaded via Google Fonts — swap for self-hosted files in production if preferred.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');

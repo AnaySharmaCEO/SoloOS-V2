@@ -1,0 +1,26 @@
+<svg width="130" height="32" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="leadGradient" x1="10" y1="11.5" x2="18" y2="20.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" /> 
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    
+    <linearGradient id="railGradient" x1="2" y1="16" x2="26" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D6A4D" />
+      <stop offset="100%" stop-color="#0A523B" />
+    </linearGradient>
+  </defs>
+
+  <g id="Pipeline-Icon-Refined">
+    <rect x="2" y="7" width="20" height="3.5" rx="1.75" fill="url(#railGradient)" />
+    
+    <circle cx="15" cy="16" r="5" fill="url(#leadGradient)" />
+    
+    <rect x="5" y="21.5" width="21" height="3.5" rx="1.75" fill="url(#railGradient)" />
+  </g>
+
+  <g id="Brand-Text">
+    <text x="38" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#111827" letter-spacing="-0.03em">Solo</text>
+    <text x="74" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0D6A4D" letter-spacing="-0.01em">OS</text>
+  </g>
+</svg>
