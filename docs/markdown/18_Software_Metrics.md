@@ -76,11 +76,11 @@ $$\text{Average team size} = \text{Effort} / \text{Duration} \approx 2.8 \text{ 
 
 | Metric | Value | Source |
 |---|---|---|
-| Total commits | **[FILL]** | Section 7, item 2 |
-| Commits per contributor | **[FILL]** | Section 7, item 2 |
-| Pull requests (opened / merged) | **[FILL]** / **[FILL]** | GitHub, Pull requests tab |
-| Issues (opened / closed) | **[FILL]** / **[FILL]** | GitHub, Issues tab |
-| Active development days | **[FILL]** | Section 7, item 2 |
+| Total commits | 6 (as of 1 November 2026) | GitHub Insights → Contributors |
+| Commits per contributor | AnaySharmaCEO 3, AryanTiwari005 3 | GitHub Insights → Contributors |
+| Pull requests (opened / merged) | [FILL] / [FILL] | GitHub, Pull requests tab |
+| Issues (opened / closed) | [FILL] / [FILL] | GitHub, Issues tab |
+| Active development weeks | 3 (weeks of Sep 7, Sep 14, Nov 2) | GitHub Insights → Contributors |
 
 ### 4.2 Agile metrics
 
